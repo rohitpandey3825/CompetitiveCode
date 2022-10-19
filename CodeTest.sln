@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30330.147
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32929.387
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonkAndRotation", "MonkAndRotation\MonkAndRotation.csproj", "{A7B5CA91-D2F0-4588-968A-5BDD2162C7AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Program", "MonkAndRotation\Program.csproj", "{A7B5CA91-D2F0-4588-968A-5BDD2162C7AA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelperProject", "HelperProject\HelperProject.csproj", "{10BE2BD7-B62B-45F0-8F29-AD83F45D0772}"
 EndProject
