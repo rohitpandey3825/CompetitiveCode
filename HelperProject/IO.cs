@@ -45,7 +45,7 @@ namespace Helper.IO
             }
             catch (Exception ex)
             {
-                throw ex;
+                Console.WriteLine("Somthing Bad Happended" + ex.ToString());
             }
         }
 
