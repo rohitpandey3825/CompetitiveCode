@@ -14,22 +14,22 @@ namespace Helper.IO
         {
             try
             {
-                string filePathName = Directory.GetParent(Directory.GetCurrentDirectory()).FullName;
-                string inputPathName = new String(filePathName + "\\_Inputs");
-                string outputPathName = new String(filePathName + "\\_Outputs");
-                if (!String.IsNullOrEmpty(FolderName))
-                {
-                    inputPathName = inputPathName + "\\" + FolderName;
-                    outputPathName = outputPathName + "\\" + FolderName;
-                }
-                if(!Directory.Exists(inputPathName))
-                {
-                    Directory.CreateDirectory(inputPathName);
-                }
-                if(!Directory.Exists(outputPathName))
-                {
-                    Directory.CreateDirectory(outputPathName);
-                }
+                string filePathName = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+                string inputPathName = new String(filePathName);
+                string outputPathName = new String(filePathName);
+                //if (!String.IsNullOrEmpty(FolderName))
+                //{
+                //    inputPathName = inputPathName + "\\" + FolderName;
+                //    outputPathName = outputPathName + "\\" + FolderName;
+                //}
+                //if(!Directory.Exists(inputPathName))
+                //{
+                //    Directory.CreateDirectory(inputPathName);
+                //}
+                //if(!Directory.Exists(outputPathName))
+                //{
+                //    Directory.CreateDirectory(outputPathName);
+                //}
                 inputPathName = inputPathName + "\\input.txt";
                 outputPathName = outputPathName + "\\output.txt";
                 if (!File.Exists(inputPathName))

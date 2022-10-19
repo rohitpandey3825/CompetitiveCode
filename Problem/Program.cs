@@ -1,11 +1,11 @@
 ﻿using System;
 using Helper.IO;
 
-namespace MonkAndRotation
+namespace Problem
 {
     class Program
     {
-        private static ConsoleReader Console = new ConsoleReader("MonkAndRotation");
+        private static ConsoleReader Console = new ConsoleReader("Problem");
 
         static void Main(string[] args)
         {

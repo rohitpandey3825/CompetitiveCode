@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/MonkAndRotation/bin/Debug/netcoreapp3.1/MonkAndRotation.dll",
+            "program": "${workspaceFolder}/Problem/bin/Debug/netcoreapp3.1/Problem.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/MonkAndRotation",
+            "cwd": "${workspaceFolder}/Problem",
             "console": "internalConsole",
             "stopAtEntry": false
         },
