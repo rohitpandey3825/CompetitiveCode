@@ -6,28 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Problem.Factory
+namespace Problem.Interface
 {
-    public class CalandersFactory
+    public abstract class CalandersFactory
     {
-        public static ICalanders GetCalander(string cardType)
+        protected abstract IList<ICalanders> GetCalanders();
+        public IList<ICalanders> CreateCalanders()
         {
-            ICalanders calander = null;
-
-            if (cardType == "Google")
-            {
-                calander = new GoogleCalander();
-            }
-            else if (cardType == "OutLook")
-            {
-                calander = new OutlookCalander();
-            }
-            else if (cardType == "ICloud")
-            {
-                calander = new ICalCalander();
-            }
-
-            return calander;
+            return this.GetCalanders();
         }
     }
 }

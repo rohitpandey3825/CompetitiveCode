@@ -8,18 +8,27 @@ namespace Problem
     {
         static void Main(string[] args)
         {
-            ICalanders calanders = CalandersFactory.GetCalander("Google");
-
-            if (calanders != null)
+            var calanders = new DextopCalanderFactory().CreateCalanders();
+            Console.WriteLine("Dextop");
+            foreach (var calander in calanders)
             {
-                calanders.ConnectUser("Batroc");
-                Console.WriteLine(calanders.GetGonnectionString());
-                calanders.refreshToken();
-                Console.WriteLine(calanders.GetGonnectionString());
+                calander.ConnectUser("Batroc");
+                Console.WriteLine(calander.GetGonnectionString());
+                calander.refreshToken();
+                Console.WriteLine(calander.GetGonnectionString());
+                Console.WriteLine();
             }
-            else
+
+            Console.WriteLine("Moblie");
+            var mobcalanders = new MobileCalandersFactory().CreateCalanders();
+
+            foreach (var calander in mobcalanders)
             {
-                Console.WriteLine("Invalid Calander");
+                calander.ConnectUser("Batroc");
+                Console.WriteLine(calander.GetGonnectionString());
+                calander.refreshToken();
+                Console.WriteLine(calander.GetGonnectionString());
+                Console.WriteLine();
             }
 
             Console.ReadKey();
