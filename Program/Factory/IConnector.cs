@@ -10,7 +10,7 @@ namespace Problem.Interface
     /// <summary>
     /// Defines a interface of calander types created by facotry;
     /// </summary>
-    public interface ICalanders
+    public interface IConnector
     {
         string UserName { get; set; }
         string AuthToken { get; set; }

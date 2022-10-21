@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Problem.Interface;
-namespace Problem.Calanders
+namespace Problem.Confrencing
 {
-    public class ICalCalander : ICalanders
+    public class WebExConfrencing : IConnector
     {
         public string UserName { get; set; }
         public string AuthToken { get; set; }
 
-        private string connectionSting = "ICloud";
-        public ICalCalander()
+        private string connectionSting = "WebExConfrencing";
+        public WebExConfrencing()
         {
             this.UserName = "";
             this.AuthToken = "";

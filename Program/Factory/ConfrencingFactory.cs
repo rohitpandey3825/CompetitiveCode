@@ -1,4 +1,4 @@
-﻿using Problem.Calanders;
+﻿using Problem.Confrencing;
 using Problem.Interface;
 using System;
 using System.Collections.Generic;
@@ -8,30 +8,30 @@ using System.Threading.Tasks;
 
 namespace Problem.Factory
 {
-    public class CalandersFactory : ConnectorsFactory
+    public class ConfrencingFactory : ConnectorsFactory
     {
         public override IConnector GetConnection(string type)
         {
-            IConnector calander = null;
+            IConnector confrencing = null;
 
             if (type.Equals("Google"))
             {
-                return new GoogleCalander();
+                return new GoogleConfrencing();
             }
             else if (type.Equals("Outlook"))
             {
-                return new OutlookCalander();
-            }
-            else if (type.Equals("ICloud"))
-            {
-                return new ICalCalander();
+                return new OutlookConfrencing();
             }
             else if (type.Equals("Zoom"))
             {
-                return new ZoomCalander();
+                return new ZoomConfrencing();
+            }
+            else if (type.Equals("Webex"))
+            {
+                return new WebExConfrencing();
             }
 
-            return calander;
+            return confrencing;
         }
     }
 }

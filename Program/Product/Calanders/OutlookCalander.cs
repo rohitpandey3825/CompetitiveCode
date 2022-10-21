@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 using Problem.Interface;
 namespace Problem.Calanders
 {
-    public class GoogleCalander : ICalanders
+    public class OutlookCalander : IConnector
     {
         public string UserName { get; set; }
         public string AuthToken { get; set; }
-        private string connectionSting = "Google";
 
-        public GoogleCalander()
+        public OutlookCalander()
         {
             this.UserName = "";
             this.AuthToken = "";
         }
 
+        private string connectionSting = "OutlookCalander";
         public bool ConnectUser(string userName)
         {
             this.UserName = userName;

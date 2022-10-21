@@ -4,20 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Problem.Interface;
-namespace Problem.Calanders
+namespace Problem.Confrencing
 {
-    public class ZoomCalander : ICalanders
+    public class GoogleConfrencing : IConnector
     {
         public string UserName { get; set; }
         public string AuthToken { get; set; }
+        private string connectionSting = "GoogleConfrencing";
 
-        public ZoomCalander()
+        public GoogleConfrencing()
         {
             this.UserName = "";
             this.AuthToken = "";
         }
 
-        private string connectionSting = "Zoom";
         public bool ConnectUser(string userName)
         {
             this.UserName = userName;

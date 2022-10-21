@@ -1,5 +1,4 @@
 ﻿using System;
-using Problem.Factory;
 using Problem.Interface;
 
 namespace Problem
@@ -8,28 +7,22 @@ namespace Problem
     {
         static void Main(string[] args)
         {
-            var calanders = new DextopCalanderFactory().CreateCalanders();
-            Console.WriteLine("Dextop");
-            foreach (var calander in calanders)
-            {
-                calander.ConnectUser("Batroc");
-                Console.WriteLine(calander.GetGonnectionString());
-                calander.refreshToken();
-                Console.WriteLine(calander.GetGonnectionString());
-                Console.WriteLine();
-            }
+            var baseType = ConnectorsFactory.CreateConnectorType("Calander");
+            var calander = baseType.GetConnection("Google");
+            calander.ConnectUser("Batroc");
+            Console.WriteLine(calander.GetGonnectionString());
+            calander.refreshToken();
+            Console.WriteLine(calander.GetGonnectionString());
+            Console.WriteLine();
 
-            Console.WriteLine("Moblie");
-            var mobcalanders = new MobileCalandersFactory().CreateCalanders();
+            baseType = ConnectorsFactory.CreateConnectorType("Confrencing");
+            calander = baseType.GetConnection("Google");
+            calander.ConnectUser("Batroc");
+            Console.WriteLine(calander.GetGonnectionString());
+            calander.refreshToken();
+            Console.WriteLine(calander.GetGonnectionString());
+            Console.WriteLine();
 
-            foreach (var calander in mobcalanders)
-            {
-                calander.ConnectUser("Batroc");
-                Console.WriteLine(calander.GetGonnectionString());
-                calander.refreshToken();
-                Console.WriteLine(calander.GetGonnectionString());
-                Console.WriteLine();
-            }
 
             Console.ReadKey();
         }
