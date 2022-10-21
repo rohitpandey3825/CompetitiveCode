@@ -10,6 +10,11 @@ namespace Problem.Factory
 {
     public class ConfrencingFactory : ConnectorsFactory
     {
+        public ConfrencingFactory()
+        {
+            Console.WriteLine("ConfrencingFactory init");
+        }
+
         public override IConnector GetConnection(string type)
         {
             IConnector confrencing = null;

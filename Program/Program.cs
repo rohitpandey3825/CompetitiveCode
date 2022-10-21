@@ -8,7 +8,8 @@ namespace Problem
         static void Main(string[] args)
         {
             var baseType = ConnectorsFactory.CreateConnectorType("Calander");
-            var calander = baseType.GetConnection("Google");
+            Console.WriteLine("Initialized connecter with lazy");
+            var calander = baseType.Value.GetConnection("Google");
             calander.ConnectUser("Batroc");
             Console.WriteLine(calander.GetGonnectionString());
             calander.refreshToken();
@@ -16,7 +17,8 @@ namespace Problem
             Console.WriteLine();
 
             baseType = ConnectorsFactory.CreateConnectorType("Confrencing");
-            calander = baseType.GetConnection("Google");
+            Console.WriteLine("Initialized connecter with lazy");
+            calander = baseType.Value.GetConnection("Google");
             calander.ConnectUser("Batroc");
             Console.WriteLine(calander.GetGonnectionString());
             calander.refreshToken();

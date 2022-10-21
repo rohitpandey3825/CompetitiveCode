@@ -12,15 +12,22 @@ namespace Problem.Interface
     public abstract class ConnectorsFactory
     {
         public abstract IConnector GetConnection(string type);
-        public static ConnectorsFactory CreateConnectorType(string root)
+
+        private static readonly Lazy<ConnectorsFactory> CalandersInstancelock =
+                    new Lazy<ConnectorsFactory>(() => new CalandersFactory());
+
+        private static readonly Lazy<ConnectorsFactory> ConfrencingInstancelock =
+                    new Lazy<ConnectorsFactory>(() => new ConfrencingFactory());
+
+        public static Lazy<ConnectorsFactory> CreateConnectorType(string root)
         {
-            if(root.Equals("Calander"))
+            if (root.Equals("Calander"))
             {
-                return new CalandersFactory();
+                return CalandersInstancelock;
             }
             else
             {
-                return new ConfrencingFactory();
+                return ConfrencingInstancelock;
             }
         }
     }

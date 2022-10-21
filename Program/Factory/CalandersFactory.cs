@@ -10,6 +10,10 @@ namespace Problem.Factory
 {
     public class CalandersFactory : ConnectorsFactory
     {
+        public CalandersFactory()
+        {
+            Console.WriteLine("CalandersFactory init");
+        }
         public override IConnector GetConnection(string type)
         {
             IConnector calander = null;
